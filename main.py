@@ -9,8 +9,7 @@ user_db = {
 app = FastAPI()
 
 
-@app.get('/')
-async def root():
+@app.get('/users')
+def get_users():
     user_list = list(user_db.values())
     return user_list
-
